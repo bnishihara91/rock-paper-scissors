@@ -7,15 +7,15 @@ function getComputerChoice() {
 
 function checkWinner(playerSelection, computerSelection) { 
     if (playerSelection == computerSelection) { 
-        return "It's a tie.";
+        return "Tie";
     } else if (
         (playerSelection == "rock" && computerSelection == "scissors") ||
         (playerSelection == "scissors" && computerSelection == "paper") ||
         (playerSelection == "paper" && computerSelection == "rock")
         ){
-            return "Player Wins!";
+            return "Player";
         } else {
-            return "Computer Wins."
+            return "Computer";
         }
 
 }
