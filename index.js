@@ -5,6 +5,9 @@ function getComputerChoice() {
     return choice;
 }
 
+function checkWinner(playerSelection, computerSelection) { 
+    
+}
 
 function playRound(playerSelection, computerSelection) {
 
