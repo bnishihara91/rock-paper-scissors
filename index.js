@@ -52,7 +52,7 @@ function game() {
     console.log("Welcome");
     let playerScore = 0;
     let computerScore = 0;
-    for (let i = 0; i <5; i++) {
+    for (let i = 0; i < 5; i++) {
         const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection)); 
@@ -71,3 +71,5 @@ function game() {
         console.log("We have a tie!");
   }
 }
+
+game();
