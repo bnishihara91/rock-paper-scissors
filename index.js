@@ -1,4 +1,4 @@
-const options = ["rock", "paper", "scissor"];
+const options = ["rock", "paper", "scissors"];
 
 function getComputerChoice() {
     const choice = options[Math.floor(Math.random() * options.length)];
@@ -46,4 +46,28 @@ function playRound(playerSelection, computerSelection) {
     } else { 
         return `You lose! ${computerSelection} beats ${playerSelection}.`; 
     }
+}
+
+function game() { 
+    console.log("Welcome");
+    let playerScore = 0;
+    let computerScore = 0;
+    for (let i = 0; i <5; i++) {
+        const playerSelection = getPlayerChoice();
+        const computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection)); 
+        if(checkWinner(playerSelection, computerSelection) == "Player") { 
+            playerScore++;
+        } else if (checkWinner(playerSelection, computerSelection) == "Computer") { 
+            computerScore++;
+        }
+    }
+    console.log("Game Over")
+    if (playerScore > computerScore) { 
+        console.log("Player is the winner!");
+    } else if (playerScore < computerScore) { 
+        console.log("Computer is the winner!");
+    } else { 
+        console.log("We have a tie!");
+  }
 }
