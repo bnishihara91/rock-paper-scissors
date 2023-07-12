@@ -12,6 +12,13 @@ function displayResult(message) {
     resultEl.textContent = "Result: " + message;
   }
 
+  function displayScores() {
+    const playerScoreEl = document.getElementById("playerScore");
+    const computerScoreEl = document.getElementById("computerScore");
+    playerScoreEl.textContent = "Player Score: " + playerScore;
+    computerScoreEl.textContent = "Computer Score: " + computerScore;
+  }
+  
 function checkWinner(playerSelection, computerSelection) { 
     if (playerSelection == computerSelection) { 
         return "Tie";
