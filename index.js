@@ -7,6 +7,11 @@ function getComputerChoice() {
     return choice;
 }
 
+function displayResult(message) {
+    const resultEl = document.getElementById("result");
+    resultEl.textContent = "Result: " + message;
+  }
+
 function checkWinner(playerSelection, computerSelection) { 
     if (playerSelection == computerSelection) { 
         return "Tie";
