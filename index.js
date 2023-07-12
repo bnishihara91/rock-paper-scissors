@@ -35,13 +35,20 @@ function checkWinner(playerSelection, computerSelection) {
 }
 
 function playRound(playerSelection, computerSelection) {
+    const computerSelection = getComputerchoicee();
     const result = checkWinner(playerSelection, computerSelection);
-    if (result == "Tie") {
-        return "It's a tie!";
-    } else if (result == "Player") { 
-        return `You win! ${playerSelection} beats ${computerSelection}.`;
+    if (result === "Tie") {
+        displayResult("It's a tie!");
+    } else if (result === "Player") { 
+        displayResult(`You win! ${playerSelection} beats ${computerSelection}.`);
+        playerScore++;
     } else { 
-        return `You lose! ${computerSelection} beats ${playerSelection}.`; 
+        displayResult(`You lose! ${computerSelection} beats ${playerSelection}.`); 
+        computerScore++;
+    }
+    displayScores();
+    if (playerScore === 5 || computerScore === 5) {
+        endGame();
     }
 }
 
