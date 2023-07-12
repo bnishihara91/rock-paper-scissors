@@ -20,12 +20,12 @@ function displayResult(message) {
   }
   
 function checkWinner(playerSelection, computerSelection) { 
-    if (playerSelection == computerSelection) { 
+    if (playerSelection === computerSelection) { 
         return "Tie";
     } else if (
-        (playerSelection == "rock" && computerSelection == "scissors") ||
-        (playerSelection == "scissors" && computerSelection == "paper") ||
-        (playerSelection == "paper" && computerSelection == "rock")
+        (playerSelection === "rock" && computerSelection === "scissors") ||
+        (playerSelection === "scissors" && computerSelection === "paper") ||
+        (playerSelection === "paper" && computerSelection === "rock")
         ){
             return "Player";
         } else {
