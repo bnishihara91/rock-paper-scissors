@@ -34,8 +34,8 @@ function checkWinner(playerSelection, computerSelection) {
 
 }
 
-function playRound(playerSelection, computerSelection) {
-    const computerSelection = getComputerchoicee();
+function playRound(playerSelection) {
+    const computerSelection = getComputerChoice();
     const result = checkWinner(playerSelection, computerSelection);
     if (result === "Tie") {
         displayResult("It's a tie!");
@@ -67,11 +67,11 @@ document.getElementById("rock").addEventListener("click", () => {
     playRound("rock");
   });
   
-  document.getElementById("paper").addEventListener("click", () => {
+document.getElementById("paper").addEventListener("click", () => {
     playRound("paper");
   });
   
-  document.getElementById("scissors").addEventListener("click", () => {
+document.getElementById("scissors").addEventListener("click", () => {
     playRound("scissors");
   });
   
